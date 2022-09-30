@@ -9,6 +9,9 @@
     html, body {
       width: 100%;
       height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family:Arial, Helvetica, sans-serif;
     }
     main {
       display: flex;
@@ -16,16 +19,61 @@
       align-items: center;
       width: 100%;
       height: 100%;
+      position: relative;
+    }
+    .background {
+      background-image: url("achtergrond.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-filter: blur(8px);
+      filter: blur(8px);
+      opacity: 0.5;
     }
     .hero {
-      max-width: 800px;
-      height: auto;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .houselink {
+      color: #939393;
+      outline: none;
+      position: relative;
+      -webkit-box-shadow: 0 0 14px 0 rgba(0,0,0,1);
+      box-shadow: 0 0 14px 0 rgba(0,0,0,1);
+      font-size: 48px;
+    }
+    .houselink:hover:after {
+      opacity: 1;
+    }
+    .houselink:after {
+      background: rgba(20,20,20,0.8);
+      content: 'Te koop';
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
     }
   </style>
 </head>
 <body>
+  <div class="background"></div>
   <main>
-    <img class="hero" src="woning.jpg" title="Woning Bangert en oosterpolder te koop" with="800" height="533" />
+    <a href="https://www.funda.nl/koop/zwaag/huis-88204193-achterkogge-22/" class="houselink">
+      <img class="hero" src="woning.jpg" alt="Woning Bangert en oosterpolder te koop" with="800" height="533" />
+    </a>
   </main>
 </body>
 </html>

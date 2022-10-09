@@ -1,0 +1,379 @@
+html {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #4f4f50;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #010101;
+}
+
+.site {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  background-image: url('../images/woning-extrasmall.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  flex: 1 0 auto;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.headerContainerTitle {
+  background: rgba(0,0,0,0.35);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 4.2vw;
+  height: 100%;
+  padding: 60px;
+}
+.headerContainerTitle h1 {
+  color: #fff;
+  margin: 0;
+}
+
+.headerContainerTitleWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.price {
+  position: relative;
+  padding: 5px 10px;
+}
+.price-blocker {
+  background-color: #4f4f50;
+  content: 'Bekijk vraagprijs';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.price input {
+  position: absolute;
+  visibility: hidden;
+  left: -100vw;
+}
+
+.price input:checked + .price-blocker {
+  display: none;
+}
+.price-tag {
+  display: block;
+  font-style: italic;
+  font-size: 0.8em;
+  position: relative;
+}
+
+.city {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.forsale {
+  background: #3bedb7;
+  color: #4f4f50;
+  display: inline-block;
+  padding: 10px;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+  position: relative;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.wrapper.fullheight {
+  height: 100%;
+}
+
+footer .wrapper {
+  border-top: 1px solid #ededed;
+}
+
+footer .left {
+  font-size: 0.7em;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+footer .right {
+  width: 100%;
+}
+
+footer .wrapper:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.carousel {
+  width: 100%;
+  height: 80vh;
+  overflow: auto;
+}
+
+.imagecontainer {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+.imagecontainer img {
+  height: 100%;
+  width: auto;
+}
+
+.columns-2 {
+  display: block;
+  padding-bottom: 20px;
+}
+
+.iconlist {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.iconlist li {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4px 0;
+}
+
+.iconlist img {
+  margin-right: 20px;
+}
+
+.fullimage img {
+  width: 100%;
+  height: auto;
+}
+
+.factsheet {
+  margin: 0;
+}
+
+.object-facts {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.object-facts:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.object-facts dd {
+  border-top: 1px solid #ededed;
+  color: #666;
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem 0 0;
+}
+
+.object-facts dt {
+  color: #000;
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.object-facts dd.object-facts-group {
+  border: none;
+  width: 100%;
+  padding: 0;
+}
+
+.object-facts dd.object-facts-group .object-facts dd {
+  padding-left: 20px;
+}
+.object-facts dd.object-facts-group .object-facts dt {
+  padding-left: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 40px;
+}
+.mt-1 {
+  margin-top: 40px;
+}
+.pb-1 {
+  padding-bottom: 40px;
+}
+.pt-1 {
+  padding-top: 40px;
+}
+
+.openstreetmap {
+  border: 0;
+  width: 100%;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.btn-contact {
+  background: #3bedb7;
+  color: #4f4f50;
+  border-radius: 16px;
+  padding: 10px 20px;
+  text-decoration: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.btn-contact:hover {
+  background: #f4f9fd;
+  color: #3bedb7;
+}
+
+@media screen and (min-width: 320px) {
+  header {
+    background-image: url('../images/woning-small.jpg');
+  }
+}
+
+@media screen and (min-width: 600px) {
+  html, body {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+
+  header {
+    background-image: url('../images/woning-medium.jpg');
+  }
+  .columns-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+    padding: 0;
+  }
+
+  .object-facts dd {
+    border-top: 1px solid #ededed;
+    float: left;
+    clear: left;
+    width: 35%;
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+
+  .object-facts dt {
+    border-top: 1px solid #ededed;
+    float: left;
+    width: 65%;
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+
+  .object-facts dd.object-facts-group .object-facts dt {
+    padding-left: 0px;
+  }
+
+  .openstreetmap {
+    border: 0;
+    width: 100%;
+    height: 400px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer .left {
+    float: left;
+    width: auto;
+    margin-bottom: 0;
+  }
+  footer .right {
+    float: right;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    background-image: url('../images/woning-large.jpg');
+  }
+  .headerContainerTitle {
+    font-size: 2vw;
+  }
+
+  .factsheet {
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  .openstreetmap {
+    border: 0;
+    width: 100%;
+    height: 600px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

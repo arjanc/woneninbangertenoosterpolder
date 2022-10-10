@@ -86,7 +86,6 @@ header {
 }
 .price-blocker {
   background-color: #4f4f50;
-  content: 'Bekijk vraagprijs';
   display: flex;
   justify-content: center;
   align-items: center;

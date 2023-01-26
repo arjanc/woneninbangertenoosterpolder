@@ -10,7 +10,7 @@
 
     gtag('config', 'G-8X2J11JNNY');
   </script>
-  <title>Te koop! Achterkogge 22 - Wonen in Bangert en oosterpolder te Hoorn</title>
+  <title>Verkocht! Achterkogge 22 - Wonen in Bangert en oosterpolder te Hoorn</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Vind uw droomhuis in de Bangert en oosterpolder in Zwaag." />
@@ -19,12 +19,35 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+  <link rel="preload" as="image" href="/assets/images/woning-small.webp">
   <link rel="canonical" href="https://www.achterkogge22.nl">
 </head>
 <body style="width: 100%; height: 100%; margin: 0; padding: 0; color: #4f4f50; font-family: Arial, Helvetica, sans-serif; ">
   <div class="site" style="display: flex; flex-direction: column; width: 100%; height: 100%;">
-    <header class="mb-1" style="min-height: 70vh; flex: 1 0 auto; position: relative; margin-bottom: 40px;">
-      <div class="header-image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;">
+    <header class="mb-1" style="min-height: 70vh; flex: 1 0 auto; position: relative; margin-bottom: 100px; margin-top: 44px;">
+      <nav>
+        <div class="wrapper flex">
+          <button class="hamburger" onClick="javascript: handleMenuToggle();">=</button>
+          <ul id="menu" class="menu">
+            <li><a href="/#home">Home</a></li>
+            <li><a href="/#data">Data</a></li>
+            <li><a href="/#locatie">Locatie</a></li>
+            <li><a href="/#fotos">Foto's</a></li>
+            <li><a href="/#plattegronden">Plattegronden</a></li>
+          </ul>
+          <div class="mediaLinks">
+            <span>Bekijk op</span>
+            <a href="https://www.instagram.com/2onder1kaphoorn/" title="Bekijk deze woning op Instagram" target="_blank">
+              <img src="/assets/icons/instagramlogo.svg" width="25" height="25" alt="Instagram" />
+            </a>
+            <a href="https://www.funda.nl/koop/zwaag/huis-88389532-achterkogge-22" title="Bekijk deze woning op Funda" target="_blank">
+              <img src="/assets/images/fundawonen-logo.svg" width="101" height="36" alt="Funda wonen" />
+            </a>
+            
+          </div>
+        </div>
+      </nav>
+      <div id="home" class="header-image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;">
         <img
             srcset="/assets/images/woning-large.webp 1600w,/assets/images/woning-medium.webp 1024w,/assets/images/woning-small.webp 600w"
             sizes="(max-width: 600px) 600w, (max-width: 1024px) 1024w, 100vw"
@@ -39,13 +62,14 @@
           <div class="headerContainerTitle" style="background: rgba(0,0,0,0.35); color: white; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; height: 100%; padding: 60px;">
             <div class="headerContainerTitleWrapper" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
               <h1 style="color: #fff; margin: 0;">Achterkogge 22</h1>
-              <div><span class="city" style="display: inline-block; margin-right: 1rem;">Zwaag</span><a href="https://us7.list-manage.com/contact-form?u=7bd3d6e35206bbfdcc9ad6d10&form_id=2cba9e6aa1b3051bdf5f20634f2bacd1" class="forsale" target="_blank" style="background: #3bedb7; color: #4f4f50; display: inline-block; padding: 10px; text-decoration: none;">TE KOOP</a></div>
+              <div>
+                <span class="city" style="display: inline-block; margin-right: 1rem;">Zwaag</span>
+                <span class="forsale" style="background: #3bedb7; color: #4f4f50; display: inline-block; padding: 10px; position: relative; text-decoration: none;">
+                  TE KOOP
+                  <span style="background: red; display: block; color: white; padding: 0 20px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-25deg); white-space: nowrap;">Verkocht o.v.b</span>
+                </span>
             </div>
-            <label class="price" for="price" style="position: relative; padding: 5px 10px;">
-              <input id="price" type="checkbox" name="price" value="" style="position: absolute; visibility: hidden; left: -100vw;" />
-              <span class="price-blocker" style="background-color: #4f4f50; position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 2;">Toon prijs</span>
-              <span class="price-tag" style="font-style: italic; position: relative;">Bieden vanaf: &euro; 550.000,-</span>
-            </label>
+            </div>
           </div> 
         </div>
       </div>
@@ -148,7 +172,7 @@
           />
       </div>
       <div class="wrapper pb-1">
-        <h3 class="center">Data</h3>
+        <h3 id="data" class="center">Data</h3>
         <div class="factsheet">
           <h4>Bouw</h4>
           <dl class="object-facts">
@@ -279,9 +303,9 @@
           />
         </div>
       </div>
-      <iframe title="Open streetmap" class="openstreetmap pb-1" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=5.086023509502412%2C52.6698082154045%2C5.088834464550019%2C52.671205366557466&amp;layer=mapnik&amp;marker=52.67050598332249%2C5.087428987026215"></iframe>
+      <iframe id="locatie" title="Open streetmap" class="openstreetmap pb-1" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=5.086023509502412%2C52.6698082154045%2C5.088834464550019%2C52.671205366557466&amp;layer=mapnik&amp;marker=52.67050598332249%2C5.087428987026215"></iframe>
       <div class="wrapper pb-1">
-        <h2 class="center">Gallerij</h2>
+        <h2 id="fotos" class="center">Foto's</h2>
         <div class="gallery">
           <img src="/assets/images/Achterkogge-22-15-s.webp" width="600" height="400" alt="Kamer 1" />
           <img src="/assets/images/Achterkogge-22-31-s.webp" width="600" height="400" alt="Kamer 2" />
@@ -296,7 +320,7 @@
         </div>
       </div>
       <div class="wrapper pb-1">
-        <h2 class="center">Plattegronden</h2>
+        <h2 id="plattegronden" class="center">Plattegronden</h2>
       </div>
       <div class="carousel">
         <div class="imagecontainer">
@@ -311,7 +335,7 @@
             srcset="/assets/images/plattegrond-boven-l.webp 1440w,/assets/images/plattegrond-boven-m.webp 1024w,/assets/images/plattegrond-boven-s.webp 600w,/assets/images/plattegrond-boven-xs.webp 320w"
             sizes="(max-width: 320px) 320w, (max-width: 600px) 600w, (max-width: 1024px) 1024w, 100vw"
             src="/assets/images/plattegrond-boven-xs.webp"
-            alt="plattegrond 1ste verdieping"
+            alt="plattegrond 1e verdieping"
             width="600" height="400"
           />
           <img
@@ -334,13 +358,30 @@
     <footer>
       <div class="wrapper pb-1 pt-1">
         <div class="left">&copy; 2022 Achterkogge 22</div>
-        <div class="right">
-          <a href="https://us7.list-manage.com/contact-form?u=7bd3d6e35206bbfdcc9ad6d10&form_id=2cba9e6aa1b3051bdf5f20634f2bacd1" class="btn-contact" target="_blank">
-            Neem contact op!
-          </a>
-        </div>
       </div>
     </footer>
   </div>
+  <script lang="text/javascript">
+    const menu = document.getElementById('menu')
+    const menuLinks = [...menu.getElementsByTagName('a')]
+    
+    menuLinks.forEach((menuLink) => {
+      menuLink.addEventListener('click', (event) => {
+        menu.classList.remove('open')
+      })
+    })
+    function handleMenuToggle() {
+      if (menu.classList.contains('open')) {
+        menu.classList.remove('open')
+      } else {
+        menu.classList.add('open')
+      }
+    }
+    document.addEventListener('click', (event) => {
+      if (!menu.contains(event.target) && !event.target.classList.contains('hamburger') && menu.classList.contains('open')) {
+        menu.classList.remove('open')
+      }
+    })
+  </script>
 </body>
 </html>
